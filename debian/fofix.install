@@ -1,0 +1,3 @@
+data CREDITS usr/share/fofix
+src/*.py src/*.pot src/midi usr/share/fofix/src
+debian/fofix.desktop usr/share/applications

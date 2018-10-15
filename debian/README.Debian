@@ -1,0 +1,16 @@
+
+Due to license restrictions no songs are distributed with the Debian package.
+If you know any appropriately licensed songs, please let us know.
+
+Downloaded songs have to be put into /usr/share/fofix/data/songs/.
+Upstream is currently working on implementing more than one
+configurable directories.
+
+Good resources to get help and songs for this game are:
+
+ * The unofficial FretsOnFire Forum at http://www.fretsonfire.net
+ * The FretsOnFire Wiki at http://fretsonfire.wikidot.com/
+
+The above sites also feature tutorials how to make your own fofix songs
+from existing mp3 files and guitar/drum tabs.
+

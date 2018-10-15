@@ -1,0 +1,56 @@
+fofix-dfsg (3.121-5~deb9u1) stretch; urgency=medium
+
+  * QA upload.
+  * Rebuild for stretch.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 15 Oct 2018 21:06:22 +0200
+
+fofix-dfsg (3.121-5) unstable; urgency=medium
+
+  * QA upload.
+  * Call image.tobytes('raw', ...) instead of image.tostring('raw', ...),
+    thanks to Christian Trenkwalder.  (Closes: #873156)
+  * Override source-contains-prebuilt-ms-help-file.
+
+ -- Andreas Beckmann <anbe@debian.org>  Mon, 15 Oct 2018 18:25:19 +0200
+
+fofix-dfsg (3.121-4) unstable; urgency=low
+
+  * Orphaning package.
+  * Build-Deps: Replace python-support by dh-python
+
+ -- Christian Brunotte <ch@debian.org>  Fri, 02 Sep 2016 20:35:13 +0200
+
+fofix-dfsg (3.121-3) unstable; urgency=low
+
+  * Removed Debian specific no_numeric_module patch as it introduced bugs
+    and the program runs fine without it.
+    Thanks to Alessio Gaeta. Closes: #696641
+
+ -- Christian Hammers <ch@debian.org>  Wed, 09 Jan 2013 00:24:42 +0100
+
+fofix-dfsg (3.121-2) unstable; urgency=low
+
+  * Removed architecture tag [amd64] from python-pygame dependency as this
+    was not policy compliant for an architecture all package. Was not
+    necessary for the current version anyway. Also removed architecture tag
+    from Suggests. Closes: #581305
+  * Adjusted debian/watch for current code.google.com page.
+
+ -- Christian Hammers <ch@debian.org>  Mon, 24 May 2010 13:23:10 +0200
+
+fofix-dfsg (3.121-1) unstable; urgency=low
+
+  * First Debian release based on the unofficial package by John Stumpo.
+    Closes: #525986
+  * New upstream release.
+  * Lowered dependency to python-pygame to 1.8 as 1.9 is not yet in unstable.
+  * Switch to dpkg-source 3.0 (quilt) format
+
+ -- Christian Hammers <ch@debian.org>  Sun, 21 Feb 2010 12:09:32 +0100
+
+fofix (3.120-1) unstable; urgency=low
+
+  * Initial release
+
+ -- John Stumpo <stump@jstump.com>  Wed, 05 Oct 2009 00:47:11 -0400

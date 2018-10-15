@@ -1,0 +1,18 @@
+== Patches ==
+
+This package uses quilt to manage all modifications to the upstream source.
+Changes are stored in the source package as diffs in debian/patches and applied
+during the build.
+
+See /usr/share/doc/quilt/README.source for a detailed explanation.
+
+== Dependencies ==
+
+The original unofficial package had a dependency to python-pygame (>= 1.9) but
+only 1.8 is currently in Debian unstable.  -- 2010-02-20, ch@debian.org
+
+== License Issues ==
+
+According to doc/copyright "Distribution, modification or commercial usage of
+the songs is not allowed." due to which the tutorial/bangbang had to be removed
+from the orig.tar.gz. -- 2010-02-21, ch@debian.org

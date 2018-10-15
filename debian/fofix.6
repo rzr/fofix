@@ -1,0 +1,99 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH FOFIX 6 "October 4, 2009"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+fofix \- Rock Band(tm)-like OpenGL rhythm game
+.SH SYNOPSIS
+.B fofix
+.RI [ options ]
+.SH DESCRIPTION
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" respectively.
+\fBfofix\fP (Frets on Fire X) is a rhythm game in the style of Guitar
+Hero(tm) and Rock Band(tm).  It supports the simulation of playing guitar,
+bass guitar, and drums and supports vocal input using a microphone.  More
+than one player can play, cooperatively or competitively.
+
+\fBfofix\fP is written in Python using pygame and OpenGL.
+.SH OPTIONS
+This program follows the usual GNU command line syntax, with long
+options starting with two dashes (`-').
+A summary of options is included below.
+.TP
+\fB\-h\fP, \fB\-\-help\fP
+Show summary of options.
+.TP
+\fB\-v\fP, \fB\-\-verbose\fP
+Outputs log to stdout in addition to the usual logfile.
+.TP
+\fB\-d\fP, \fB\-\-debug\fP
+Writes debugging information to a debug file.
+.TP
+\fB\-c\fP, \fB\-\-config\fP=\fIFILE\fP
+Specifies a configuration file to use instead of the usual one.
+.TP
+\fB\-f\fP, \fB\-\-fullscreen\fP=\fI[true|false]\fP
+Specify whether the game runs in fullscreen mode.
+.TP
+\fB\-r\fP, \fB\-\-resolution\fP=\fIRESOLUTION\fP
+Specify the resolution used by the game.
+.TP
+\fB\-t\fP, \fB\-\-theme\fP=\fITHEME\fP
+Specifies the theme to use.
+.TP
+\fB\-s\fP, \fB\-\-song\fP=\fISONGDIR\fP
+Skips the menu and just starts gameplay using the song present in SONGDIR.
+.P
+The following settings only apply if a song is specified:
+.TP
+\fB\-l\fP, \fB\-\-diff\fP=\fIDIFFICULTY\fP
+Specifies the difficulty to use.
+
+0: Expert, 1: Hard, 2: Medium, 3: Easy
+.TP
+\fB\-p\fP, \fB\-\-part\fP=\fIPART\fP
+Specifies the part to use.
+
+0: Guitar, 1: Rhythm, 2: Bass, 3: Lead, 4: Drum, 5: Vocals
+.TP
+\fB\-m\fP, \fB\-\-mode\fP=\fIMODE\fP
+Specifies the game mode to use.
+
+0: Quickplay, 1: Practice, 2: Career
+.SH ENVIRONMENT
+.TP
+.B PYTHON
+Specifies the
+.BR python (1)
+binary used to run the game.
+.TP
+.B FOFIX_PYTHON_FLAGS
+Specifies extra options for
+.BR python (1).
+Defaults to \fB-OO\fP.
+.SH SEE ALSO
+.BR fretsonfire (6),
+.BR python (1).
+.SH AUTHOR
+FoFiX was forked from a project developed by Sami Kyöstilä,
+Joonas Kerttula, and Tommi Inkilä and is now developed by
+Chris Paiano, Pascal Giard, Tom Skinner, John Stumpo,
+Nicholas Hydock, Harris Worthington, and many others.
+.PP
+This manual page was written by John Stumpo <stump@jstump.com>,
+for the Debian project (and may be used by others).

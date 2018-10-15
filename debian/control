@@ -1,0 +1,23 @@
+Source: fofix-dfsg
+Section: games
+Priority: optional
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: debhelper (>= 7), dh-python, quilt
+Standards-Version: 3.8.4
+Homepage: http://code.google.com/p/fofix/
+
+Package: fofix
+Architecture: all
+Depends: ${python:Depends}, ${misc:Depends},
+ python (>= 2.5) | python-pysqlite2,
+ python-pygame (>= 1.8),
+ python-opengl, python-imaging, python-numpy
+Recommends: python-ogg, python-pyvorbis, python-pyaudio
+Suggests: python-psyco
+Description: rhythm game in the style of Rock Band(tm) and Guitar Hero(tm)
+ FoFiX (Frets on Fire X) is a fork of Frets on Fire with many added 
+ features. The object of the game is to accurately play guitar, bass, 
+ or drums using the keyboard (or guitar and drum controllers from Guitar 
+ Hero(tm) and Rock Band(tm)) and to sing lyrics as accurately as 
+ possible. Many different single-player and multi-player game modes are 
+ available.

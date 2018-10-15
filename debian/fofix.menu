@@ -1,0 +1,7 @@
+!C menu-2
+?package(fofix):
+      needs="X11"
+      section="Games/Action"
+      title="fofix"
+      command="/usr/games/fofix"
+      ;

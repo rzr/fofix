@@ -1,0 +1,48 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+export DH_VERBOSE=1
+
+include /usr/share/quilt/quilt.make
+
+build: build-stamp
+build-stamp: $(QUILT_STAMPFN)
+	dh_testdir
+
+clean: unpatch
+	dh_testdir
+	dh_testroot
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep  
+	dh_installdirs
+	install -m0755 debian/fofix.sh debian/fofix/usr/games/fofix
+	install -m0644 svg/fofix_icon.svg debian/fofix/usr/share/pixmaps/fofix.svg
+
+binary-arch: install
+# We have nothing to do by default.
+
+binary-indep: install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs doc/changelog.txt
+	dh_installdocs
+	dh_install
+	dh_installmenu
+	dh_python3
+	dh_installman debian/fofix.6
+	dh_compress
+	# Upstream tarball had x permission for most files 
+	find debian/fofix/ -type f -print0 | xargs -0 chmod a-x
+	chmod +x debian/fofix/usr/games/fofix    
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install patch unpatch
